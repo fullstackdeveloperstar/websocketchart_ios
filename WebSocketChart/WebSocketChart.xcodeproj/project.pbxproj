@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421F820F5573800A872BC /* AppDelegate.swift */; };
+		8BD421FB20F5573800A872BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421FA20F5573800A872BC /* ViewController.swift */; };
+		8BD421FE20F5573800A872BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD421FC20F5573800A872BC /* Main.storyboard */; };
+		8BD4220020F5573D00A872BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD421FF20F5573D00A872BC /* Assets.xcassets */; };
+		8BD4220320F5573D00A872BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4220120F5573D00A872BC /* LaunchScreen.storyboard */; };
+		8BD4220E20F5573D00A872BC /* WebSocketChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4220D20F5573D00A872BC /* WebSocketChartTests.swift */; };
+		8BD4221920F5573D00A872BC /* WebSocketChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4221820F5573D00A872BC /* WebSocketChartUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BD4220A20F5573D00A872BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD421ED20F5573800A872BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD421F420F5573800A872BC;
+			remoteInfo = WebSocketChart;
+		};
+		8BD4221520F5573D00A872BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD421ED20F5573800A872BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD421F420F5573800A872BC;
+			remoteInfo = WebSocketChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8BD421F520F5573800A872BC /* WebSocketChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD421F820F5573800A872BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BD421FA20F5573800A872BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BD421FD20F5573800A872BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BD421FF20F5573D00A872BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BD4220220F5573D00A872BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BD4220420F5573D00A872BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD4220920F5573D00A872BC /* WebSocketChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD4220D20F5573D00A872BC /* WebSocketChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketChartTests.swift; sourceTree = "<group>"; };
+		8BD4220F20F5573D00A872BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD4221420F5573D00A872BC /* WebSocketChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD4221820F5573D00A872BC /* WebSocketChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketChartUITests.swift; sourceTree = "<group>"; };
+		8BD4221A20F5573D00A872BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BD421F220F5573800A872BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD4220620F5573D00A872BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD4221120F5573D00A872BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BD421EC20F5573800A872BC = {
+			isa = PBXGroup;
+			children = (
+				8BD421F720F5573800A872BC /* WebSocketChart */,
+				8BD4220C20F5573D00A872BC /* WebSocketChartTests */,
+				8BD4221720F5573D00A872BC /* WebSocketChartUITests */,
+				8BD421F620F5573800A872BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BD421F620F5573800A872BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BD421F520F5573800A872BC /* WebSocketChart.app */,
+				8BD4220920F5573D00A872BC /* WebSocketChartTests.xctest */,
+				8BD4221420F5573D00A872BC /* WebSocketChartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BD421F720F5573800A872BC /* WebSocketChart */ = {
+			isa = PBXGroup;
+			children = (
+				8BD421F820F5573800A872BC /* AppDelegate.swift */,
+				8BD421FA20F5573800A872BC /* ViewController.swift */,
+				8BD421FC20F5573800A872BC /* Main.storyboard */,
+				8BD421FF20F5573D00A872BC /* Assets.xcassets */,
+				8BD4220120F5573D00A872BC /* LaunchScreen.storyboard */,
+				8BD4220420F5573D00A872BC /* Info.plist */,
+			);
+			path = WebSocketChart;
+			sourceTree = "<group>";
+		};
+		8BD4220C20F5573D00A872BC /* WebSocketChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BD4220D20F5573D00A872BC /* WebSocketChartTests.swift */,
+				8BD4220F20F5573D00A872BC /* Info.plist */,
+			);
+			path = WebSocketChartTests;
+			sourceTree = "<group>";
+		};
+		8BD4221720F5573D00A872BC /* WebSocketChartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8BD4221820F5573D00A872BC /* WebSocketChartUITests.swift */,
+				8BD4221A20F5573D00A872BC /* Info.plist */,
+			);
+			path = WebSocketChartUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BD421F420F5573800A872BC /* WebSocketChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD4221D20F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChart" */;
+			buildPhases = (
+				8BD421F120F5573800A872BC /* Sources */,
+				8BD421F220F5573800A872BC /* Frameworks */,
+				8BD421F320F5573800A872BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebSocketChart;
+			productName = WebSocketChart;
+			productReference = 8BD421F520F5573800A872BC /* WebSocketChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BD4220820F5573D00A872BC /* WebSocketChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD4222020F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChartTests" */;
+			buildPhases = (
+				8BD4220520F5573D00A872BC /* Sources */,
+				8BD4220620F5573D00A872BC /* Frameworks */,
+				8BD4220720F5573D00A872BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD4220B20F5573D00A872BC /* PBXTargetDependency */,
+			);
+			name = WebSocketChartTests;
+			productName = WebSocketChartTests;
+			productReference = 8BD4220920F5573D00A872BC /* WebSocketChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8BD4221320F5573D00A872BC /* WebSocketChartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD4222320F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChartUITests" */;
+			buildPhases = (
+				8BD4221020F5573D00A872BC /* Sources */,
+				8BD4221120F5573D00A872BC /* Frameworks */,
+				8BD4221220F5573D00A872BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD4221620F5573D00A872BC /* PBXTargetDependency */,
+			);
+			name = WebSocketChartUITests;
+			productName = WebSocketChartUITests;
+			productReference = 8BD4221420F5573D00A872BC /* WebSocketChartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BD421ED20F5573800A872BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = developer;
+				TargetAttributes = {
+					8BD421F420F5573800A872BC = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					8BD4220820F5573D00A872BC = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8BD421F420F5573800A872BC;
+					};
+					8BD4221320F5573D00A872BC = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8BD421F420F5573800A872BC;
+					};
+				};
+			};
+			buildConfigurationList = 8BD421F020F5573800A872BC /* Build configuration list for PBXProject "WebSocketChart" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BD421EC20F5573800A872BC;
+			productRefGroup = 8BD421F620F5573800A872BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BD421F420F5573800A872BC /* WebSocketChart */,
+				8BD4220820F5573D00A872BC /* WebSocketChartTests */,
+				8BD4221320F5573D00A872BC /* WebSocketChartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BD421F320F5573800A872BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD4220320F5573D00A872BC /* LaunchScreen.storyboard in Resources */,
+				8BD4220020F5573D00A872BC /* Assets.xcassets in Resources */,
+				8BD421FE20F5573800A872BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD4220720F5573D00A872BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD4221220F5573D00A872BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BD421F120F5573800A872BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD421FB20F5573800A872BC /* ViewController.swift in Sources */,
+				8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD4220520F5573D00A872BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD4220E20F5573D00A872BC /* WebSocketChartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD4221020F5573D00A872BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD4221920F5573D00A872BC /* WebSocketChartUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BD4220B20F5573D00A872BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BD421F420F5573800A872BC /* WebSocketChart */;
+			targetProxy = 8BD4220A20F5573D00A872BC /* PBXContainerItemProxy */;
+		};
+		8BD4221620F5573D00A872BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BD421F420F5573800A872BC /* WebSocketChart */;
+			targetProxy = 8BD4221520F5573D00A872BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BD421FC20F5573800A872BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD421FD20F5573800A872BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8BD4220120F5573D00A872BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD4220220F5573D00A872BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BD4221B20F5573D00A872BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8BD4221C20F5573D00A872BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BD4221E20F5573D00A872BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSocketChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = web.socket.chart.WebSocketChart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BD4221F20F5573D00A872BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSocketChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = web.socket.chart.WebSocketChart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8BD4222120F5573D00A872BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSocketChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = web.socket.chart.WebSocketChartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebSocketChart.app/WebSocketChart";
+			};
+			name = Debug;
+		};
+		8BD4222220F5573D00A872BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSocketChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = web.socket.chart.WebSocketChartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebSocketChart.app/WebSocketChart";
+			};
+			name = Release;
+		};
+		8BD4222420F5573D00A872BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSocketChartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = web.socket.chart.WebSocketChartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WebSocketChart;
+			};
+			name = Debug;
+		};
+		8BD4222520F5573D00A872BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSocketChartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = web.socket.chart.WebSocketChartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WebSocketChart;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BD421F020F5573800A872BC /* Build configuration list for PBXProject "WebSocketChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD4221B20F5573D00A872BC /* Debug */,
+				8BD4221C20F5573D00A872BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD4221D20F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD4221E20F5573D00A872BC /* Debug */,
+				8BD4221F20F5573D00A872BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD4222020F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD4222120F5573D00A872BC /* Debug */,
+				8BD4222220F5573D00A872BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD4222320F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD4222420F5573D00A872BC /* Debug */,
+				8BD4222520F5573D00A872BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BD421ED20F5573800A872BC /* Project object */;
+}
