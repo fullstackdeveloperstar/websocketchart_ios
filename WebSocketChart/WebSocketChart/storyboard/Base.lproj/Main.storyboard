@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -82,25 +83,54 @@
         <!--Main-->
         <scene sceneID="fT0-HS-nAP">
             <objects>
-                <collectionViewController id="Z7S-bn-8P8" sceneMemberID="viewController">
+                <collectionViewController id="Z7S-bn-8P8" customClass="MainWorkChartsCollectionViewController" customModule="WebSocketChart" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vkp-aL-JJx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T9r-tQ-PZF">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lif-Z6-q2c">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EeX-Ac-fh0">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="workchart_cell" id="EeX-Ac-fh0" customClass="WorkChartCollectionViewCell" customModule="WebSocketChart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="173" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="173" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L5s-XP-IwL">
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="L5s-XP-IwL" secondAttribute="height" multiplier="1:1" id="lYL-Xo-lLw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM0-to-rrM">
+                                            <rect key="frame" x="0.0" y="173" width="173" height="19"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="WM0-to-rrM" firstAttribute="centerX" secondItem="EeX-Ac-fh0" secondAttribute="centerX" id="0lM-iF-Y61"/>
+                                    <constraint firstItem="WM0-to-rrM" firstAttribute="top" secondItem="L5s-XP-IwL" secondAttribute="bottom" id="7fl-Au-Uwo"/>
+                                    <constraint firstItem="WM0-to-rrM" firstAttribute="width" secondItem="EeX-Ac-fh0" secondAttribute="width" id="8La-n0-fEx"/>
+                                    <constraint firstItem="L5s-XP-IwL" firstAttribute="width" secondItem="EeX-Ac-fh0" secondAttribute="width" id="A1K-Gx-2Ah"/>
+                                    <constraint firstAttribute="bottom" secondItem="WM0-to-rrM" secondAttribute="bottom" id="Dqa-kN-ZKD"/>
+                                    <constraint firstItem="L5s-XP-IwL" firstAttribute="top" secondItem="EeX-Ac-fh0" secondAttribute="top" id="U1p-3f-cZv"/>
+                                    <constraint firstItem="L5s-XP-IwL" firstAttribute="centerX" secondItem="EeX-Ac-fh0" secondAttribute="centerX" id="YXT-sY-vyw"/>
+                                    <constraint firstItem="WM0-to-rrM" firstAttribute="leading" secondItem="L5s-XP-IwL" secondAttribute="leading" id="emK-aM-WYd"/>
+                                </constraints>
+                                <size key="customSize" width="173" height="192"/>
+                                <connections>
+                                    <outlet property="img_preview" destination="L5s-XP-IwL" id="KYt-sQ-mDF"/>
+                                    <outlet property="lb_name" destination="WM0-to-rrM" id="b0W-6Y-tcA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -123,7 +153,7 @@
         <!--Add WorkChart-->
         <scene sceneID="T4r-DF-8xu">
             <objects>
-                <viewController id="lIl-J4-otu" sceneMemberID="viewController">
+                <viewController id="lIl-J4-otu" customClass="AddWorkChartViewController" customModule="WebSocketChart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4HR-4T-Fve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,9 +181,16 @@
                                     <segue destination="OiP-iu-UDp" kind="show" id="QNq-8p-xYU"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="done" id="2ZT-ld-Cn2"/>
+                            <barButtonItem systemItem="done" id="2ZT-ld-Cn2">
+                                <connections>
+                                    <action selector="done:" destination="lIl-J4-otu" id="xrQ-0f-lgg"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tf_workchartname" destination="gU5-wo-Fcr" id="5Wo-S3-adI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4S-YL-gr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

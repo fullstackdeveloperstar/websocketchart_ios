@@ -43,8 +43,8 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func login(_ sender: Any) {
-       var st_username = self.tf_username.text!
-       var st_pwd = self.tf_pass.text!
+        let st_username = self.tf_username.text!
+        let st_pwd = self.tf_pass.text!
         
         if(st_username == "admin" && st_pwd == "admin")
         {
@@ -52,10 +52,7 @@ class LoginViewController: UIViewController {
         }
         else {
             let alert = UIAlertController(title: "Warnning", message: "User Name or password is invalid, Please try again.", preferredStyle: .alert)
-            
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-           
-            
             self.present(alert, animated: true)
         }
     }

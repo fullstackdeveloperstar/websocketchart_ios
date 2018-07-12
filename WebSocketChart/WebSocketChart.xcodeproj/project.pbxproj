@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B03F34820F71620005C6059 /* Workchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34720F71620005C6059 /* Workchart.swift */; };
+		8B03F34A20F716CB005C6059 /* MainWorkChartsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */; };
+		8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34B20F71A77005C6059 /* GlobalObjs.swift */; };
+		8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */; };
+		8B03F35120F741B3005C6059 /* AddWorkChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */; };
 		8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421F820F5573800A872BC /* AppDelegate.swift */; };
 		8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421FA20F5573800A872BC /* LoginViewController.swift */; };
 		8BD421FE20F5573800A872BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD421FC20F5573800A872BC /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B03F34720F71620005C6059 /* Workchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workchart.swift; sourceTree = "<group>"; };
+		8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorkChartsCollectionViewController.swift; sourceTree = "<group>"; };
+		8B03F34B20F71A77005C6059 /* GlobalObjs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalObjs.swift; sourceTree = "<group>"; };
+		8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkChartViewController.swift; sourceTree = "<group>"; };
 		8BD421F520F5573800A872BC /* WebSocketChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD421F820F5573800A872BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD421FA20F5573800A872BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +84,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B03F34D20F72B41005C6059 /* cellviews */ = {
+			isa = PBXGroup;
+			children = (
+				8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */,
+			);
+			path = cellviews;
+			sourceTree = "<group>";
+		};
+		8BC8A46420F65B850042F163 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				8B03F34720F71620005C6059 /* Workchart.swift */,
+				8B03F34B20F71A77005C6059 /* GlobalObjs.swift */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
 		8BD0F90820F58875001E545E /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
 				8BD421FA20F5573800A872BC /* LoginViewController.swift */,
+				8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */,
+				8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -121,6 +150,8 @@
 		8BD421F720F5573800A872BC /* WebSocketChart */ = {
 			isa = PBXGroup;
 			children = (
+				8B03F34D20F72B41005C6059 /* cellviews */,
+				8BC8A46420F65B850042F163 /* modules */,
 				8BD0F90D20F5893A001E545E /* storyboard */,
 				8BD0F90920F58890001E545E /* kits */,
 				8BD0F90820F58875001E545E /* viewcontrollers */,
@@ -280,8 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B03F35120F741B3005C6059 /* AddWorkChartViewController.swift in Sources */,
+				8B03F34820F71620005C6059 /* Workchart.swift in Sources */,
 				8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */,
 				8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */,
+				8B03F34A20F716CB005C6059 /* MainWorkChartsCollectionViewController.swift in Sources */,
+				8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */,
+				8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
