@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class MainWorkChartsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-  
+    var clickedWorkChart = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +48,22 @@ class MainWorkChartsCollectionViewController: UICollectionViewController, UIColl
         self.collectionView?.reloadData()
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "sg_main_workchart":
+            let workChartVC = segue.destination as! WorkChartTableViewController
+            workChartVC.workchartIndex = self.clickedWorkChart
+            break
+        default:
+            break
+        }
+     }
 
     // MARK: UICollectionViewDataSource
 
@@ -119,6 +127,11 @@ class MainWorkChartsCollectionViewController: UICollectionViewController, UIColl
         return true
     }
     */
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+          self.clickedWorkChart = indexPath.row
+          self.performSegue(withIdentifier: "sg_main_workchart", sender: nil)
+    }
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

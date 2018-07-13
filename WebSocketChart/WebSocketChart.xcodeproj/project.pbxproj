@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B382ED8AA6D36DBD8E3FAAA /* Pods_WebSocketChartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D77AA324AEFAB0526C3E94C /* Pods_WebSocketChartTests.framework */; };
+		5329B37D7E522B4C4A5B0A98 /* Pods_WebSocketChartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1BF34C0F0D533205B28658 /* Pods_WebSocketChartUITests.framework */; };
 		8B03F34820F71620005C6059 /* Workchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34720F71620005C6059 /* Workchart.swift */; };
 		8B03F34A20F716CB005C6059 /* MainWorkChartsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */; };
 		8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34B20F71A77005C6059 /* GlobalObjs.swift */; };
 		8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */; };
 		8B03F35120F741B3005C6059 /* AddWorkChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */; };
+		8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */; };
 		8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421F820F5573800A872BC /* AppDelegate.swift */; };
 		8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421FA20F5573800A872BC /* LoginViewController.swift */; };
 		8BD421FE20F5573800A872BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD421FC20F5573800A872BC /* Main.storyboard */; };
@@ -19,6 +22,7 @@
 		8BD4220320F5573D00A872BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4220120F5573D00A872BC /* LaunchScreen.storyboard */; };
 		8BD4220E20F5573D00A872BC /* WebSocketChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4220D20F5573D00A872BC /* WebSocketChartTests.swift */; };
 		8BD4221920F5573D00A872BC /* WebSocketChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4221820F5573D00A872BC /* WebSocketChartUITests.swift */; };
+		8EDE73489286476AD74FC971 /* Pods_WebSocketChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC30A3670863E2D5F66C6108 /* Pods_WebSocketChart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1BF34C0F0D533205B28658 /* Pods_WebSocketChartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocketChartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD20DAB77484E33844E3805 /* Pods-WebSocketChartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketChartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketChartUITests/Pods-WebSocketChartUITests.release.xcconfig"; sourceTree = "<group>"; };
+		60AC312BF32CBF4E9B1101EE /* Pods-WebSocketChartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketChartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketChartTests/Pods-WebSocketChartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CD6736B6EE06B0092618B8C /* Pods-WebSocketChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketChart.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketChart/Pods-WebSocketChart.release.xcconfig"; sourceTree = "<group>"; };
+		7D77AA324AEFAB0526C3E94C /* Pods_WebSocketChartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocketChartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83D8F0C15B642F956F38A878 /* Pods-WebSocketChartUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketChartUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketChartUITests/Pods-WebSocketChartUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B03F34720F71620005C6059 /* Workchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workchart.swift; sourceTree = "<group>"; };
 		8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorkChartsCollectionViewController.swift; sourceTree = "<group>"; };
 		8B03F34B20F71A77005C6059 /* GlobalObjs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalObjs.swift; sourceTree = "<group>"; };
 		8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkChartViewController.swift; sourceTree = "<group>"; };
+		8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewController.swift; sourceTree = "<group>"; };
 		8BD421F520F5573800A872BC /* WebSocketChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD421F820F5573800A872BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD421FA20F5573800A872BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +68,9 @@
 		8BD4221420F5573D00A872BC /* WebSocketChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD4221820F5573D00A872BC /* WebSocketChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketChartUITests.swift; sourceTree = "<group>"; };
 		8BD4221A20F5573D00A872BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3BF6158A9C386AED2361CD3 /* Pods-WebSocketChartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketChartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketChartTests/Pods-WebSocketChartTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9ABE9D4158F79BE7D3A15CB /* Pods-WebSocketChart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocketChart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebSocketChart/Pods-WebSocketChart.debug.xcconfig"; sourceTree = "<group>"; };
+		FC30A3670863E2D5F66C6108 /* Pods_WebSocketChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocketChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDE73489286476AD74FC971 /* Pods_WebSocketChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B382ED8AA6D36DBD8E3FAAA /* Pods_WebSocketChartTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,18 +94,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5329B37D7E522B4C4A5B0A98 /* Pods_WebSocketChartUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A130976B5C7E7C7F16042B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9ABE9D4158F79BE7D3A15CB /* Pods-WebSocketChart.debug.xcconfig */,
+				6CD6736B6EE06B0092618B8C /* Pods-WebSocketChart.release.xcconfig */,
+				60AC312BF32CBF4E9B1101EE /* Pods-WebSocketChartTests.debug.xcconfig */,
+				A3BF6158A9C386AED2361CD3 /* Pods-WebSocketChartTests.release.xcconfig */,
+				83D8F0C15B642F956F38A878 /* Pods-WebSocketChartUITests.debug.xcconfig */,
+				5BD20DAB77484E33844E3805 /* Pods-WebSocketChartUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8B03F34D20F72B41005C6059 /* cellviews */ = {
 			isa = PBXGroup;
 			children = (
 				8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */,
 			);
 			path = cellviews;
+			sourceTree = "<group>";
+		};
+		8B03F35520F76603005C6059 /* opensources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = opensources;
 			sourceTree = "<group>";
 		};
 		8BC8A46420F65B850042F163 /* modules */ = {
@@ -107,6 +144,7 @@
 				8BD421FA20F5573800A872BC /* LoginViewController.swift */,
 				8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */,
 				8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */,
+				8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -134,6 +172,8 @@
 				8BD4220C20F5573D00A872BC /* WebSocketChartTests */,
 				8BD4221720F5573D00A872BC /* WebSocketChartUITests */,
 				8BD421F620F5573800A872BC /* Products */,
+				3A130976B5C7E7C7F16042B3 /* Pods */,
+				B546F6AA6BFC9E5C49673AA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +190,7 @@
 		8BD421F720F5573800A872BC /* WebSocketChart */ = {
 			isa = PBXGroup;
 			children = (
+				8B03F35520F76603005C6059 /* opensources */,
 				8B03F34D20F72B41005C6059 /* cellviews */,
 				8BC8A46420F65B850042F163 /* modules */,
 				8BD0F90D20F5893A001E545E /* storyboard */,
@@ -180,6 +221,16 @@
 			path = WebSocketChartUITests;
 			sourceTree = "<group>";
 		};
+		B546F6AA6BFC9E5C49673AA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC30A3670863E2D5F66C6108 /* Pods_WebSocketChart.framework */,
+				7D77AA324AEFAB0526C3E94C /* Pods_WebSocketChartTests.framework */,
+				0F1BF34C0F0D533205B28658 /* Pods_WebSocketChartUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD4221D20F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChart" */;
 			buildPhases = (
+				C9C7535FC1D592AD66E7D1BC /* [CP] Check Pods Manifest.lock */,
 				8BD421F120F5573800A872BC /* Sources */,
 				8BD421F220F5573800A872BC /* Frameworks */,
 				8BD421F320F5573800A872BC /* Resources */,
+				D243C258FBCDE7DD97CD1B85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD4222020F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChartTests" */;
 			buildPhases = (
+				E63E969CC9EE3501724B5906 /* [CP] Check Pods Manifest.lock */,
 				8BD4220520F5573D00A872BC /* Sources */,
 				8BD4220620F5573D00A872BC /* Frameworks */,
 				8BD4220720F5573D00A872BC /* Resources */,
@@ -222,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD4222320F5573D00A872BC /* Build configuration list for PBXNativeTarget "WebSocketChartUITests" */;
 			buildPhases = (
+				290B4F025921A7CA986E4BB5 /* [CP] Check Pods Manifest.lock */,
 				8BD4221020F5573D00A872BC /* Sources */,
 				8BD4221120F5573D00A872BC /* Frameworks */,
 				8BD4221220F5573D00A872BC /* Resources */,
@@ -306,6 +361,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		290B4F025921A7CA986E4BB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebSocketChartUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9C7535FC1D592AD66E7D1BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebSocketChart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D243C258FBCDE7DD97CD1B85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WebSocketChart/Pods-WebSocketChart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebSocketChart/Pods-WebSocketChart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E63E969CC9EE3501724B5906 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebSocketChartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BD421F120F5573800A872BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -316,6 +446,7 @@
 				8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */,
 				8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */,
 				8B03F34A20F716CB005C6059 /* MainWorkChartsCollectionViewController.swift in Sources */,
+				8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */,
 				8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */,
 				8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */,
 			);
@@ -488,6 +619,7 @@
 		};
 		8BD4221E20F5573D00A872BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9ABE9D4158F79BE7D3A15CB /* Pods-WebSocketChart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +639,7 @@
 		};
 		8BD4221F20F5573D00A872BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD6736B6EE06B0092618B8C /* Pods-WebSocketChart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +659,7 @@
 		};
 		8BD4222120F5573D00A872BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60AC312BF32CBF4E9B1101EE /* Pods-WebSocketChartTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,6 +680,7 @@
 		};
 		8BD4222220F5573D00A872BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3BF6158A9C386AED2361CD3 /* Pods-WebSocketChartTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -566,6 +701,7 @@
 		};
 		8BD4222420F5573D00A872BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83D8F0C15B642F956F38A878 /* Pods-WebSocketChartUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +721,7 @@
 		};
 		8BD4222520F5573D00A872BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD20DAB77484E33844E3805 /* Pods-WebSocketChartUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
