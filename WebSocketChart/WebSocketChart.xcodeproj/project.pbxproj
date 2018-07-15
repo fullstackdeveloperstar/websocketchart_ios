@@ -14,7 +14,11 @@
 		8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34B20F71A77005C6059 /* GlobalObjs.swift */; };
 		8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */; };
 		8B03F35120F741B3005C6059 /* AddWorkChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */; };
+		8B08DD9E20F9AF2D000D0237 /* WorkChartCommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD9D20F9AF2D000D0237 /* WorkChartCommonCell.swift */; };
+		8B08DDA020F9B1E7000D0237 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD9F20F9B1E7000D0237 /* BalloonMarker.swift */; };
+		8B08DDA220FBC891000D0237 /* ChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DDA120FBC891000D0237 /* ChartItem.swift */; };
 		8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */; };
+		8B1AC65720F8DCBF002F236B /* WorkChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */; };
 		8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421F820F5573800A872BC /* AppDelegate.swift */; };
 		8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421FA20F5573800A872BC /* LoginViewController.swift */; };
 		8BD421FE20F5573800A872BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD421FC20F5573800A872BC /* Main.storyboard */; };
@@ -54,7 +58,11 @@
 		8B03F34B20F71A77005C6059 /* GlobalObjs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalObjs.swift; sourceTree = "<group>"; };
 		8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkChartViewController.swift; sourceTree = "<group>"; };
+		8B08DD9D20F9AF2D000D0237 /* WorkChartCommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartCommonCell.swift; sourceTree = "<group>"; };
+		8B08DD9F20F9B1E7000D0237 /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		8B08DDA120FBC891000D0237 /* ChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItem.swift; sourceTree = "<group>"; };
 		8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewController.swift; sourceTree = "<group>"; };
+		8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewCell.swift; sourceTree = "<group>"; };
 		8BD421F520F5573800A872BC /* WebSocketChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD421F820F5573800A872BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD421FA20F5573800A872BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */,
+				8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */,
 			);
 			path = cellviews;
 			sourceTree = "<group>";
@@ -134,6 +143,9 @@
 			children = (
 				8B03F34720F71620005C6059 /* Workchart.swift */,
 				8B03F34B20F71A77005C6059 /* GlobalObjs.swift */,
+				8B08DD9D20F9AF2D000D0237 /* WorkChartCommonCell.swift */,
+				8B08DD9F20F9B1E7000D0237 /* BalloonMarker.swift */,
+				8B08DDA120FBC891000D0237 /* ChartItem.swift */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -441,14 +453,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B08DD9E20F9AF2D000D0237 /* WorkChartCommonCell.swift in Sources */,
 				8B03F35120F741B3005C6059 /* AddWorkChartViewController.swift in Sources */,
 				8B03F34820F71620005C6059 /* Workchart.swift in Sources */,
 				8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */,
+				8B08DDA020F9B1E7000D0237 /* BalloonMarker.swift in Sources */,
 				8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */,
 				8B03F34A20F716CB005C6059 /* MainWorkChartsCollectionViewController.swift in Sources */,
+				8B08DDA220FBC891000D0237 /* ChartItem.swift in Sources */,
 				8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */,
 				8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */,
 				8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */,
+				8B1AC65720F8DCBF002F236B /* WorkChartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

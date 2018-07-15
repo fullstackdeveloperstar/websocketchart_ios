@@ -21,4 +21,5 @@ enum WorkChartTypeEnum {
 class Workchart: NSObject {
    var name = ""
    var type = WorkChartTypeEnum.Line
+   var chartItems = [ChartItem]()
 }

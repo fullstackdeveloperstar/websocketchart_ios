@@ -59,7 +59,12 @@ class AddWorkChartViewController: UIViewController {
         workchart.name = st_workchartname!
         GlobalObjs.globalObjs.workcharts.append(workchart)
         self.navigationController?.popViewController(animated: true)
-        
+    }
+    
+    
+    
+    @IBAction func next(_ sender: Any) {
+        self.performSegue(withIdentifier: "segue_addworkchart_charts", sender: nil)
     }
     
     @objc func doneClicked()  {
