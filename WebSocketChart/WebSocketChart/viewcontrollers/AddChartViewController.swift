@@ -8,13 +8,23 @@
 
 import UIKit
 
-class AddChartViewController: UIViewController {
+class AddChartViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource{
 
     var workChartNo : Int!
     var isAdded = false
     var chartItemNo : Int!
     
     @IBOutlet weak var tf_chartname: UITextField!
+    
+    @IBOutlet weak var pk_charttype: UIPickerView!
+    
+    var chartTypes = ["Line Chart",
+                      "Bar Chart",
+                      "Pie Chart",
+                      "Bubble Chart",
+                      "Candle Chart",
+                      "Scatter Chart",
+                      "Radar Chart"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +49,7 @@ class AddChartViewController: UIViewController {
     
     
     
-    @IBAction func next(_ sender: Any) {
+    @IBAction func next(_ sender: Any) {	
         let st_chartname = self.tf_chartname.text
         if(st_chartname == "")
         {
@@ -55,12 +65,53 @@ class AddChartViewController: UIViewController {
         else {
             let chartItem = ChartItem()
             chartItem.name = st_chartname!
+            
+            switch self.pk_charttype.selectedRow(inComponent: 0){
+                case 0:
+                    chartItem.type = .Line
+                    break
+                case 1:
+                    chartItem.type = .Bar
+                    break
+                case 2:
+                    chartItem.type = .Pie
+                    break
+                case 3:
+                    chartItem.type = .Bubble
+                    break
+                case 4:
+                    chartItem.type = .Candle
+                    break
+                case 5:
+                    chartItem.type = .Scatter
+                    break
+                case 6:
+                    chartItem.type = .Radar
+                    break
+                default:
+                    chartItem.type = .Line
+                    break
+                
+            }
+            
             GlobalObjs.globalObjs.workcharts[self.workChartNo].chartItems.append(chartItem)
             self.isAdded = true
             self.chartItemNo = GlobalObjs.globalObjs.workcharts[self.workChartNo].chartItems.count - 1
             self.performSegue(withIdentifier: "segue_addchart_adddata", sender: nil)
         }
         
+    }
+    
+    func  numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.chartTypes.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.chartTypes[row]
     }
     
     

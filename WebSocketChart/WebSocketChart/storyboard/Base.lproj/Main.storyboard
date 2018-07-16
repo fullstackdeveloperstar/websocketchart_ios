@@ -326,6 +326,10 @@
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-Ev-fgg">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5xN-tG-vux" id="uPO-fV-0Wj"/>
+                                    <outlet property="delegate" destination="5xN-tG-vux" id="4Vt-Qs-Ke1"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -348,6 +352,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pk_charttype" destination="P3g-Ev-fgg" id="dXj-vy-r8n"/>
                         <outlet property="tf_chartname" destination="4hO-L6-JX5" id="Gw3-Pl-yJk"/>
                         <segue destination="JFO-F5-OWp" kind="show" identifier="segue_addchart_adddata" id="h56-qs-rgl"/>
                     </connections>
