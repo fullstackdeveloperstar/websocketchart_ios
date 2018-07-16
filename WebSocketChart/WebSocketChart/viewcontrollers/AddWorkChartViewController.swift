@@ -11,6 +11,10 @@ import UIKit
 class AddWorkChartViewController: UIViewController {
 
     @IBOutlet weak var tf_workchartname: UITextField!
+    
+    var isAdded = false
+    var workChartNo : Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,15 +39,23 @@ class AddWorkChartViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "segue_addworkchart_charts":
+            let chartsTVC = segue.destination as! ChartsTableViewController
+            chartsTVC.workchartNo = self.workChartNo
+            break
+        default:
+            break
+        }
     }
-    */
+ 
 
     @IBAction func done(_ sender: Any) {
         let st_workchartname = self.tf_workchartname.text
@@ -55,16 +67,42 @@ class AddWorkChartViewController: UIViewController {
             return
         }
         
-        let workchart = Workchart()
-        workchart.name = st_workchartname!
-        GlobalObjs.globalObjs.workcharts.append(workchart)
-        self.navigationController?.popViewController(animated: true)
+        
+        if(isAdded){
+            self.navigationController?.popViewController(animated: true)
+        }
+        else{
+            let workchart = Workchart()
+            workchart.name = st_workchartname!
+            GlobalObjs.globalObjs.workcharts.append(workchart)
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
     
-    
-    
     @IBAction func next(_ sender: Any) {
-        self.performSegue(withIdentifier: "segue_addworkchart_charts", sender: nil)
+        let st_workchartname = self.tf_workchartname.text
+        if(st_workchartname == "")
+        {
+            let alert = UIAlertController(title: "Warnning", message: "Please input the workchart name.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        if(self.isAdded)
+        {
+            self.performSegue(withIdentifier: "segue_addworkchart_charts", sender: nil)
+        }
+        else {
+            let workchart = Workchart()
+            workchart.name = st_workchartname!
+            GlobalObjs.globalObjs.workcharts.append(workchart)
+            self.isAdded = true
+            self.workChartNo = GlobalObjs.globalObjs.workcharts.count - 1
+            self.performSegue(withIdentifier: "segue_addworkchart_charts", sender: nil)
+        }
+        
     }
     
     @objc func doneClicked()  {

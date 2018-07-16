@@ -45,7 +45,7 @@
                                     <action selector="exit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWp-U3-5P4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-mR-dg1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-mR-dg1">
                                 <rect key="frame" x="16" y="258.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -251,19 +251,43 @@
         <!--Charts-->
         <scene sceneID="LLO-d2-2WA">
             <objects>
-                <tableViewController id="OiP-iu-UDp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ekh-IY-9h6">
+                <tableViewController id="OiP-iu-UDp" customClass="ChartsTableViewController" customModule="WebSocketChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ekh-IY-9h6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cpE-ga-sQw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="charts_cell" rowHeight="100" id="cpE-ga-sQw" customClass="ChartsTableViewCell" customModule="WebSocketChart" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cpE-ga-sQw" id="Z6P-ac-x6g">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chart Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCN-ef-sYo">
+                                            <rect key="frame" x="16" y="38" width="105" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chart Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLJ-MG-Nrf">
+                                            <rect key="frame" x="274" y="39" width="85" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WLJ-MG-Nrf" firstAttribute="centerY" secondItem="Z6P-ac-x6g" secondAttribute="centerY" id="BMS-7X-E2K"/>
+                                        <constraint firstItem="PCN-ef-sYo" firstAttribute="leading" secondItem="Z6P-ac-x6g" secondAttribute="leading" constant="16" id="EuQ-Qu-gOM"/>
+                                        <constraint firstItem="PCN-ef-sYo" firstAttribute="centerY" secondItem="Z6P-ac-x6g" secondAttribute="centerY" id="ILy-FK-ZHs"/>
+                                        <constraint firstAttribute="trailing" secondItem="WLJ-MG-Nrf" secondAttribute="trailing" constant="16" id="qZS-Wy-rlG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lb_chart_name" destination="PCN-ef-sYo" id="m4K-GU-TnC"/>
+                                    <outlet property="lb_chart_type" destination="WLJ-MG-Nrf" id="TBe-lH-ZP6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -274,19 +298,22 @@
                     <navigationItem key="navigationItem" title="Charts" id="VBk-kj-wUR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Yr-47-aca">
                             <connections>
-                                <segue destination="5xN-tG-vux" kind="show" id="lgS-1e-qvL"/>
+                                <action selector="addChart:" destination="OiP-iu-UDp" id="1fu-Cp-yoM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5xN-tG-vux" kind="show" identifier="segue_charts_addchart" id="khU-fa-bGS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rp-JP-SOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3273" y="876"/>
+            <point key="canvasLocation" x="3272.8000000000002" y="875.71214392803608"/>
         </scene>
         <!--Add Chart-->
         <scene sceneID="VUO-CU-WgF">
             <objects>
-                <viewController id="5xN-tG-vux" sceneMemberID="viewController">
+                <viewController id="5xN-tG-vux" customClass="AddChartViewController" customModule="WebSocketChart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIo-Zp-VzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,10 +343,14 @@
                     <navigationItem key="navigationItem" title="Add Chart" id="RHe-6o-WeQ">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Wb7-nw-UUE">
                             <connections>
-                                <segue destination="JFO-F5-OWp" kind="show" id="hbE-6z-bqq"/>
+                                <action selector="next:" destination="5xN-tG-vux" id="niI-D8-r8u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tf_chartname" destination="4hO-L6-JX5" id="Gw3-Pl-yJk"/>
+                        <segue destination="JFO-F5-OWp" kind="show" identifier="segue_addchart_adddata" id="h56-qs-rgl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ac-rK-vFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,9 @@
 		8B08DD9E20F9AF2D000D0237 /* WorkChartCommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD9D20F9AF2D000D0237 /* WorkChartCommonCell.swift */; };
 		8B08DDA020F9B1E7000D0237 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DD9F20F9B1E7000D0237 /* BalloonMarker.swift */; };
 		8B08DDA220FBC891000D0237 /* ChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DDA120FBC891000D0237 /* ChartItem.swift */; };
+		8B12561820FBEB160094C405 /* ChartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12561720FBEB160094C405 /* ChartsTableViewController.swift */; };
+		8B12561A20FBED970094C405 /* ChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12561920FBED970094C405 /* ChartsTableViewCell.swift */; };
+		8B12561C20FC7AA50094C405 /* AddChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12561B20FC7AA50094C405 /* AddChartViewController.swift */; };
 		8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */; };
 		8B1AC65720F8DCBF002F236B /* WorkChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */; };
 		8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421F820F5573800A872BC /* AppDelegate.swift */; };
@@ -61,6 +64,9 @@
 		8B08DD9D20F9AF2D000D0237 /* WorkChartCommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartCommonCell.swift; sourceTree = "<group>"; };
 		8B08DD9F20F9B1E7000D0237 /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		8B08DDA120FBC891000D0237 /* ChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItem.swift; sourceTree = "<group>"; };
+		8B12561720FBEB160094C405 /* ChartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewController.swift; sourceTree = "<group>"; };
+		8B12561920FBED970094C405 /* ChartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewCell.swift; sourceTree = "<group>"; };
+		8B12561B20FC7AA50094C405 /* AddChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChartViewController.swift; sourceTree = "<group>"; };
 		8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewController.swift; sourceTree = "<group>"; };
 		8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewCell.swift; sourceTree = "<group>"; };
 		8BD421F520F5573800A872BC /* WebSocketChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,7 @@
 			children = (
 				8B03F34E20F72B6E005C6059 /* WorkChartCollectionViewCell.swift */,
 				8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */,
+				8B12561920FBED970094C405 /* ChartsTableViewCell.swift */,
 			);
 			path = cellviews;
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 				8B03F34920F716CB005C6059 /* MainWorkChartsCollectionViewController.swift */,
 				8B03F35020F741B3005C6059 /* AddWorkChartViewController.swift */,
 				8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */,
+				8B12561720FBEB160094C405 /* ChartsTableViewController.swift */,
+				8B12561B20FC7AA50094C405 /* AddChartViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -459,11 +468,14 @@
 				8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */,
 				8B08DDA020F9B1E7000D0237 /* BalloonMarker.swift in Sources */,
 				8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */,
+				8B12561C20FC7AA50094C405 /* AddChartViewController.swift in Sources */,
 				8B03F34A20F716CB005C6059 /* MainWorkChartsCollectionViewController.swift in Sources */,
 				8B08DDA220FBC891000D0237 /* ChartItem.swift in Sources */,
+				8B12561820FBEB160094C405 /* ChartsTableViewController.swift in Sources */,
 				8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */,
 				8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */,
 				8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */,
+				8B12561A20FBED970094C405 /* ChartsTableViewCell.swift in Sources */,
 				8B1AC65720F8DCBF002F236B /* WorkChartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
