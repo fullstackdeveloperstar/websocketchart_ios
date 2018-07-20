@@ -26,6 +26,23 @@ class AddChartViewController: UIViewController , UIPickerViewDelegate, UIPickerV
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let keyboardToolBar = UIToolbar()
+        keyboardToolBar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem:
+            UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem:
+            UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked) )
+        
+        keyboardToolBar.setItems([flexibleSpace, doneButton], animated: true)
+        
+        self.tf_chartname.inputAccessoryView = keyboardToolBar
+        
+    }
+    
+    @objc func doneClicked()  {
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
