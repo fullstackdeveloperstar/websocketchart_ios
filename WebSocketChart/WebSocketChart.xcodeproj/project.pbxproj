@@ -20,8 +20,14 @@
 		8B12561820FBEB160094C405 /* ChartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12561720FBEB160094C405 /* ChartsTableViewController.swift */; };
 		8B12561A20FBED970094C405 /* ChartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12561920FBED970094C405 /* ChartsTableViewCell.swift */; };
 		8B12561C20FC7AA50094C405 /* AddChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12561B20FC7AA50094C405 /* AddChartViewController.swift */; };
+		8B13D52521026A7C00F3531F /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13D52421026A7C00F3531F /* XYMarkerView.swift */; };
+		8B13D52E21026BAD00F3531F /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13D52A21026BAD00F3531F /* DateValueFormatter.swift */; };
+		8B13D52F21026BAD00F3531F /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13D52B21026BAD00F3531F /* DayAxisValueFormatter.swift */; };
+		8B13D53021026BAD00F3531F /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13D52C21026BAD00F3531F /* IntAxisValueFormatter.swift */; };
+		8B13D53121026BAD00F3531F /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13D52D21026BAD00F3531F /* LargeValueFormatter.swift */; };
 		8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */; };
 		8B1AC65720F8DCBF002F236B /* WorkChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */; };
+		8B38DE6521027CF3006AD25C /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B38DE6421027CF3006AD25C /* AddDataViewController.swift */; };
 		8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421F820F5573800A872BC /* AppDelegate.swift */; };
 		8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD421FA20F5573800A872BC /* LoginViewController.swift */; };
 		8BD421FE20F5573800A872BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD421FC20F5573800A872BC /* Main.storyboard */; };
@@ -67,8 +73,14 @@
 		8B12561720FBEB160094C405 /* ChartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewController.swift; sourceTree = "<group>"; };
 		8B12561920FBED970094C405 /* ChartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTableViewCell.swift; sourceTree = "<group>"; };
 		8B12561B20FC7AA50094C405 /* AddChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChartViewController.swift; sourceTree = "<group>"; };
+		8B13D52421026A7C00F3531F /* XYMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		8B13D52A21026BAD00F3531F /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		8B13D52B21026BAD00F3531F /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		8B13D52C21026BAD00F3531F /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntAxisValueFormatter.swift; sourceTree = "<group>"; };
+		8B13D52D21026BAD00F3531F /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
 		8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewController.swift; sourceTree = "<group>"; };
 		8B1AC65620F8DCBF002F236B /* WorkChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChartTableViewCell.swift; sourceTree = "<group>"; };
+		8B38DE6421027CF3006AD25C /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
 		8BD421F520F5573800A872BC /* WebSocketChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD421F820F5573800A872BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD421FA20F5573800A872BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +157,17 @@
 			path = opensources;
 			sourceTree = "<group>";
 		};
+		8B13D52921026BAD00F3531F /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				8B13D52A21026BAD00F3531F /* DateValueFormatter.swift */,
+				8B13D52B21026BAD00F3531F /* DayAxisValueFormatter.swift */,
+				8B13D52C21026BAD00F3531F /* IntAxisValueFormatter.swift */,
+				8B13D52D21026BAD00F3531F /* LargeValueFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		8BC8A46420F65B850042F163 /* modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +176,7 @@
 				8B08DD9D20F9AF2D000D0237 /* WorkChartCommonCell.swift */,
 				8B08DD9F20F9B1E7000D0237 /* BalloonMarker.swift */,
 				8B08DDA120FBC891000D0237 /* ChartItem.swift */,
+				8B13D52421026A7C00F3531F /* XYMarkerView.swift */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -166,6 +190,7 @@
 				8B1AC65420F89D05002F236B /* WorkChartTableViewController.swift */,
 				8B12561720FBEB160094C405 /* ChartsTableViewController.swift */,
 				8B12561B20FC7AA50094C405 /* AddChartViewController.swift */,
+				8B38DE6421027CF3006AD25C /* AddDataViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -211,6 +236,7 @@
 		8BD421F720F5573800A872BC /* WebSocketChart */ = {
 			isa = PBXGroup;
 			children = (
+				8B13D52921026BAD00F3531F /* Formatters */,
 				8B03F35520F76603005C6059 /* opensources */,
 				8B03F34D20F72B41005C6059 /* cellviews */,
 				8BC8A46420F65B850042F163 /* modules */,
@@ -466,6 +492,7 @@
 				8B03F35120F741B3005C6059 /* AddWorkChartViewController.swift in Sources */,
 				8B03F34820F71620005C6059 /* Workchart.swift in Sources */,
 				8BD421FB20F5573800A872BC /* LoginViewController.swift in Sources */,
+				8B38DE6521027CF3006AD25C /* AddDataViewController.swift in Sources */,
 				8B08DDA020F9B1E7000D0237 /* BalloonMarker.swift in Sources */,
 				8BD421F920F5573800A872BC /* AppDelegate.swift in Sources */,
 				8B12561C20FC7AA50094C405 /* AddChartViewController.swift in Sources */,
@@ -473,9 +500,14 @@
 				8B08DDA220FBC891000D0237 /* ChartItem.swift in Sources */,
 				8B12561820FBEB160094C405 /* ChartsTableViewController.swift in Sources */,
 				8B1AC65520F89D05002F236B /* WorkChartTableViewController.swift in Sources */,
+				8B13D52521026A7C00F3531F /* XYMarkerView.swift in Sources */,
+				8B13D53021026BAD00F3531F /* IntAxisValueFormatter.swift in Sources */,
 				8B03F34F20F72B6E005C6059 /* WorkChartCollectionViewCell.swift in Sources */,
+				8B13D52E21026BAD00F3531F /* DateValueFormatter.swift in Sources */,
 				8B03F34C20F71A77005C6059 /* GlobalObjs.swift in Sources */,
+				8B13D53121026BAD00F3531F /* LargeValueFormatter.swift in Sources */,
 				8B12561A20FBED970094C405 /* ChartsTableViewCell.swift in Sources */,
+				8B13D52F21026BAD00F3531F /* DayAxisValueFormatter.swift in Sources */,
 				8B1AC65720F8DCBF002F236B /* WorkChartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

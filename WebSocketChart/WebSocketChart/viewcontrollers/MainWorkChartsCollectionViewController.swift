@@ -26,6 +26,27 @@ class MainWorkChartsCollectionViewController: UICollectionViewController, UIColl
         // Do any additional setup after loading the view.
         let workchart1 = Workchart()
         workchart1.name = "WorkChart1"
+        let chartItem1 = ChartItem()
+        chartItem1.name = "Chart Item 1"
+        chartItem1.type = .Line
+        chartItem1.isMaxLine = true
+        chartItem1.maxLineText = "Sms, Email, IVR"
+        chartItem1.isMinLine = true
+        chartItem1.minLineText = "Sms, Email, IVR"
+        workchart1.chartItems.append(chartItem1)
+        
+        let chartItem2 = ChartItem()
+        chartItem2.name = "Chart Item 2"
+        chartItem2.type = .Bar
+        workchart1.chartItems.append(chartItem2)
+        
+        
+        let chartItem3 = ChartItem()
+        chartItem3.name = "Chart Item3"
+        chartItem3.type = .Candle
+        workchart1.chartItems.append(chartItem3)
+        
+    
         
         let workchart2 = Workchart()
         workchart2.name = "WorkChart2"

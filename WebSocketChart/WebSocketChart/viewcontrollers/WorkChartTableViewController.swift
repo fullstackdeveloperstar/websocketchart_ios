@@ -11,6 +11,7 @@ import UIKit
 class WorkChartTableViewController: UITableViewController {
 
     @IBOutlet weak var workchart_nav_title: UINavigationItem!
+    var isLoadedArray : [Bool] = []
     
     var workchartIndex = 0
     
@@ -25,11 +26,28 @@ class WorkChartTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.workchart_nav_title.title = GlobalObjs.globalObjs.workcharts[self.workchartIndex].name
+        
+        for index in GlobalObjs.globalObjs.workcharts[self.workchartIndex].chartItems{
+            self.isLoadedArray.append(false)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "segue_workcharttvc_chartstvc":
+            let addChartVC = segue.destination as! ChartsTableViewController
+            addChartVC.workchartNo = self.workchartIndex
+            break
+        default:
+            break
+        }
     }
 
     // MARK: - Table view data source
@@ -41,7 +59,7 @@ class WorkChartTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return GlobalObjs.globalObjs.workcharts[self.workchartIndex].chartItems.count;
     }
 
     
@@ -50,8 +68,13 @@ class WorkChartTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.workchartNo = self.workchartIndex
+        cell.chartItemNo = indexPath.row
         cell.parentTableViewController = self
-        cell.initChartView()
+        if(!self.isLoadedArray[indexPath.row])
+        {
+            cell.initChartView()
+            self.isLoadedArray[indexPath.row] = true
+        }
         return cell
     }
  
@@ -101,4 +124,8 @@ class WorkChartTableViewController: UITableViewController {
     }
     */
 
+    
+    @IBAction func addchart(_ sender: Any) {
+        self.performSegue(withIdentifier: "segue_workcharttvc_chartstvc", sender: nil)
+    }
 }

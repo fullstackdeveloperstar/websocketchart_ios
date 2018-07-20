@@ -18,13 +18,9 @@ class AddChartViewController: UIViewController , UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var pk_charttype: UIPickerView!
     
-    var chartTypes = ["Line Chart",
-                      "Bar Chart",
-                      "Pie Chart",
-                      "Bubble Chart",
-                      "Candle Chart",
-                      "Scatter Chart",
-                      "Radar Chart"]
+    var chartTypes = ["Main Chart",
+                      "Sub Chart"
+                    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,28 +64,13 @@ class AddChartViewController: UIViewController , UIPickerViewDelegate, UIPickerV
             
             switch self.pk_charttype.selectedRow(inComponent: 0){
                 case 0:
-                    chartItem.type = .Line
+                    chartItem.mainsubType = .Main
                     break
                 case 1:
-                    chartItem.type = .Bar
-                    break
-                case 2:
-                    chartItem.type = .Pie
-                    break
-                case 3:
-                    chartItem.type = .Bubble
-                    break
-                case 4:
-                    chartItem.type = .Candle
-                    break
-                case 5:
-                    chartItem.type = .Scatter
-                    break
-                case 6:
-                    chartItem.type = .Radar
+                    chartItem.mainsubType = .Sub
                     break
                 default:
-                    chartItem.type = .Line
+                    chartItem.mainsubType = .Main
                     break
                 
             }

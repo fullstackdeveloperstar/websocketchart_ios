@@ -192,14 +192,21 @@
                             <outlet property="delegate" destination="HAA-Ey-wYh" id="535-bL-4gT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="gFm-pt-IYj"/>
+                    <navigationItem key="navigationItem" title="Title" id="gFm-pt-IYj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="Xh0-Wc-e3I">
+                            <connections>
+                                <action selector="addchart:" destination="HAA-Ey-wYh" id="A75-bu-XRc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="workchart_nav_title" destination="gFm-pt-IYj" id="lD0-25-kFW"/>
+                        <segue destination="OiP-iu-UDp" kind="show" identifier="segue_workcharttvc_chartstvc" id="pUa-VE-FkF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjy-jl-LPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2341.5999999999999" y="865.81709145427294"/>
+            <point key="canvasLocation" x="2343" y="876"/>
         </scene>
         <!--Add WorkChart-->
         <scene sceneID="T4r-DF-8xu">
@@ -215,13 +222,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-u6-alg">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lIl-J4-otu" id="Vn0-my-XKv"/>
+                                    <outlet property="delegate" destination="lIl-J4-otu" id="oJe-bi-MwK"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NUJ-u6-alg" firstAttribute="bottom" secondItem="wKp-dv-XR0" secondAttribute="bottom" id="5b1-w4-SRH"/>
+                            <constraint firstItem="NUJ-u6-alg" firstAttribute="trailing" secondItem="wKp-dv-XR0" secondAttribute="trailing" id="6zt-2b-SaR"/>
                             <constraint firstItem="gU5-wo-Fcr" firstAttribute="leading" secondItem="wKp-dv-XR0" secondAttribute="leading" constant="16" id="Gr8-B9-QMM"/>
                             <constraint firstItem="wKp-dv-XR0" firstAttribute="trailing" secondItem="gU5-wo-Fcr" secondAttribute="trailing" constant="16" id="NDN-O1-x8t"/>
                             <constraint firstItem="gU5-wo-Fcr" firstAttribute="top" secondItem="wKp-dv-XR0" secondAttribute="top" constant="50" id="fCL-BQ-iaU"/>
                             <constraint firstItem="gU5-wo-Fcr" firstAttribute="centerX" secondItem="4HR-4T-Fve" secondAttribute="centerX" id="jj6-mc-BF1"/>
+                            <constraint firstItem="NUJ-u6-alg" firstAttribute="leading" secondItem="wKp-dv-XR0" secondAttribute="leading" id="o9F-fb-qON"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wKp-dv-XR0"/>
                     </view>
@@ -240,6 +257,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="pk_workcharttype" destination="NUJ-u6-alg" id="mcd-WD-IoF"/>
                         <outlet property="tf_workchartname" destination="gU5-wo-Fcr" id="5Wo-S3-adI"/>
                         <segue destination="OiP-iu-UDp" kind="show" identifier="segue_addworkchart_charts" id="r7h-sa-7mN"/>
                     </connections>
@@ -396,16 +414,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lor-KO-G0F">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rqY-7k-jJD" firstAttribute="leading" secondItem="RkP-VK-k2I" secondAttribute="leading" constant="16" id="FtZ-w5-77l"/>
+                            <constraint firstItem="Lor-KO-G0F" firstAttribute="leading" secondItem="RkP-VK-k2I" secondAttribute="leading" id="HlT-oM-ZfV"/>
                             <constraint firstItem="dZd-tp-CJa" firstAttribute="leading" secondItem="RkP-VK-k2I" secondAttribute="leading" constant="16" id="IKc-UN-pvm"/>
                             <constraint firstItem="czu-Zl-s5k" firstAttribute="leading" secondItem="RkP-VK-k2I" secondAttribute="leading" constant="16" id="XqL-aB-L3u"/>
                             <constraint firstItem="dZd-tp-CJa" firstAttribute="top" secondItem="DDi-67-tC5" secondAttribute="bottom" constant="28" id="dQv-5J-PHR"/>
                             <constraint firstItem="DDi-67-tC5" firstAttribute="leading" secondItem="RkP-VK-k2I" secondAttribute="leading" constant="16" id="fpL-Xf-Jwg"/>
+                            <constraint firstItem="Lor-KO-G0F" firstAttribute="trailing" secondItem="RkP-VK-k2I" secondAttribute="trailing" id="geF-ll-3ps"/>
                             <constraint firstItem="RkP-VK-k2I" firstAttribute="trailing" secondItem="DDi-67-tC5" secondAttribute="trailing" constant="16" id="jGB-Yw-skF"/>
                             <constraint firstItem="rqY-7k-jJD" firstAttribute="top" secondItem="RkP-VK-k2I" secondAttribute="top" constant="20" id="k2U-Os-Ncl"/>
+                            <constraint firstItem="Lor-KO-G0F" firstAttribute="bottom" secondItem="RkP-VK-k2I" secondAttribute="bottom" id="wbx-zE-eIy"/>
                             <constraint firstItem="DDi-67-tC5" firstAttribute="top" secondItem="rqY-7k-jJD" secondAttribute="bottom" constant="9" id="xM4-GA-TKd"/>
                             <constraint firstItem="czu-Zl-s5k" firstAttribute="top" secondItem="dZd-tp-CJa" secondAttribute="bottom" constant="44" id="xrI-lW-DF3"/>
                         </constraints>
@@ -480,4 +504,7 @@
             <point key="canvasLocation" x="477.60000000000002" y="95.802098950524751"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pUa-VE-FkF"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,6 +16,7 @@ class WorkChartTableViewCell: UITableViewCell {
     var workChartCommonCell : WorkChartCommonCell!
     
     var workchartNo : Int!
+    var chartItemNo : Int!
     
     var parentTableViewController : WorkChartTableViewController!
     override func awakeFromNib() {
@@ -32,6 +33,7 @@ class WorkChartTableViewCell: UITableViewCell {
     func initChartView()  {
         self.workChartCommonCell = WorkChartCommonCell()
         self.workChartCommonCell.workChartNo = self.workchartNo
+        self.workChartCommonCell.chartItemNo = self.chartItemNo
         self.workChartCommonCell.parentVC = self.parentTableViewController
         self.workChartCommonCell.parentTVCC = self
         self.workChartCommonCell.initChartView()

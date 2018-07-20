@@ -18,6 +18,11 @@ enum WorkChartTypeEnum {
     case Radar
 }
 
+enum ChartItemMainSub {
+    case Main
+    case Sub
+}
+
 class Workchart: NSObject {
    var name = ""
    var type = WorkChartTypeEnum.Line
