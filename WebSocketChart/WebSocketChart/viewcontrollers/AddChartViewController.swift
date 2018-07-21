@@ -11,8 +11,10 @@ import UIKit
 class AddChartViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource{
 
     var workChartNo : Int!
-    var isAdded = false
+
     var chartItemNo : Int!
+    
+    var isAdded = false
     
     @IBOutlet weak var tf_chartname: UITextField!
     
@@ -58,6 +60,15 @@ class AddChartViewController: UIViewController , UIPickerViewDelegate, UIPickerV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "segue_addchart_adddata":
+            let addDataVC = segue.destination as! AddDataViewController
+            addDataVC.workChartNo = self.workChartNo
+            addDataVC.chartItemNo = self.chartItemNo
+            break
+        default:
+            break
+        }
     }
     
     

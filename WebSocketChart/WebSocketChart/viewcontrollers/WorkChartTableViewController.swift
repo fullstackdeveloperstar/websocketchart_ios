@@ -31,6 +31,11 @@ class WorkChartTableViewController: UITableViewController {
             self.isLoadedArray.append(false)
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+                
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

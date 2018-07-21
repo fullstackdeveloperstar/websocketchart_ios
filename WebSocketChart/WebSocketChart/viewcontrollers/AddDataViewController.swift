@@ -13,6 +13,12 @@ class AddDataViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var pk_charttype: UIPickerView!
     @IBOutlet weak var sg_typeofdata: UISegmentedControl!
     
+    var workChartNo : Int!
+    
+    var chartItemNo : Int!
+    
+    var chartItem : ChartItem!
+    
     var chartTypes = ["Line Chart",
                       "Bar Chart",
                       "Pie Chart",
@@ -25,6 +31,7 @@ class AddDataViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.chartItem = GlobalObjs.globalObjs.workcharts[self.workChartNo].chartItems[self.chartItemNo]
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,4 +62,35 @@ class AddDataViewController: UIViewController , UIPickerViewDelegate, UIPickerVi
         return self.chartTypes[row]
     }
 
+    @IBAction func next(_ sender: Any) {
+        switch self.pk_charttype.selectedRow(inComponent: 0) {
+        case 0:
+            self.chartItem.type = .Line
+            break
+        case 1:
+            self.chartItem.type = .Bar
+            break
+        case 2:
+            self.chartItem.type = .Pie
+            break
+        case 3:
+            self.chartItem.type = .Bubble
+            break
+        case 4:
+            self.chartItem.type = .Candle
+            break
+        case 5:
+            self.chartItem.type = .Scatter
+            break
+        case 6:
+            self.chartItem.type = .Radar
+            break
+        default:
+            self.chartItem.type = .Line
+            break
+        }
+        
+        self.performSegue(withIdentifier: "segue_adddata_details", sender: nil)
+    }
+    
 }

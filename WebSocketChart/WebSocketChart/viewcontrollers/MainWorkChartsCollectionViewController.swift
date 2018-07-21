@@ -29,34 +29,86 @@ class MainWorkChartsCollectionViewController: UICollectionViewController, UIColl
         let chartItem1 = ChartItem()
         chartItem1.name = "Chart Item 1"
         chartItem1.type = .Line
-        chartItem1.isMaxLine = true
-        chartItem1.maxLineText = "Sms, Email, IVR"
-        chartItem1.isMinLine = true
-        chartItem1.minLineText = "Sms, Email, IVR"
+        chartItem1.mainsubType = .Main
         workchart1.chartItems.append(chartItem1)
         
         let chartItem2 = ChartItem()
         chartItem2.name = "Chart Item 2"
         chartItem2.type = .Bar
+        chartItem2.mainsubType = .Sub
+        
         workchart1.chartItems.append(chartItem2)
         
         
         let chartItem3 = ChartItem()
         chartItem3.name = "Chart Item3"
         chartItem3.type = .Candle
+        chartItem3.mainsubType = .Sub
         workchart1.chartItems.append(chartItem3)
         
     
         
         let workchart2 = Workchart()
         workchart2.name = "WorkChart2"
-        workchart2.type = WorkChartTypeEnum.Bar
+        let chartItem2_1 = ChartItem()
+        chartItem2_1.name = "Chart Item 1"
+        chartItem2_1.type = .Line
+        chartItem2_1.mainsubType = .Sub
+        chartItem2_1.isMaxLine = true
+        chartItem2_1.maxLineText = "Sell Position"
+        chartItem2_1.isMinLine = true
+        chartItem2_1.minLineText = "Buy Position"
+        chartItem2_1.maxLineLabelPosition = .rightTop
+        chartItem2_1.minLineLabelPosition = .rightBottom
+        workchart2.chartItems.append(chartItem2_1)
+        
         let workchart3 = Workchart()
         workchart3.name = "WorkChart3"
-        workchart3.type = WorkChartTypeEnum.Bubble
+        let chartItem3_1 = ChartItem()
+        chartItem3_1.name = "Chart Item 3-1"
+        chartItem3_1.type = .Bar
+        chartItem3_1.mainsubType = .Sub
+        workchart3.chartItems.append(chartItem3_1)
+        
+        let workchart4 = Workchart()
+        workchart4.name = "WorkChart4"
+        let chartItem4_1 = ChartItem()
+        chartItem4_1.name = "Chart Item 4-1"
+        chartItem4_1.type = .Pie
+        chartItem4_1.mainsubType = .Sub
+        workchart4.chartItems.append(chartItem4_1)
+        
+        let workchart5 = Workchart()
+        workchart5.name = "WorkChart5"
+        let chartItem5_1 = ChartItem()
+        chartItem5_1.name = "Chart Item 5-1"
+        chartItem5_1.type = .Candle
+        chartItem5_1.mainsubType = .Sub
+        workchart5.chartItems.append(chartItem5_1)
+        
+        let workchart6 = Workchart()
+        workchart6.name = "WorkChart6"
+        let chartItem6_1 = ChartItem()
+        chartItem6_1.name = "Chart Item 6-1"
+        chartItem6_1.type = .Scatter
+        chartItem6_1.mainsubType = .Sub
+        workchart6.chartItems.append(chartItem6_1)
+        
+        let workchart7 = Workchart()
+        workchart7.name = "WorkChart7"
+        let chartItem7_1 = ChartItem()
+        chartItem7_1.name = "Chart Item 7-1"
+        chartItem7_1.type = .Bubble
+        chartItem7_1.mainsubType = .Sub
+        workchart7.chartItems.append(chartItem7_1)
+        
         GlobalObjs.globalObjs.workcharts.append(workchart1)
         GlobalObjs.globalObjs.workcharts.append(workchart2)
         GlobalObjs.globalObjs.workcharts.append(workchart3)
+        GlobalObjs.globalObjs.workcharts.append(workchart4)
+        GlobalObjs.globalObjs.workcharts.append(workchart5)
+        GlobalObjs.globalObjs.workcharts.append(workchart6)
+        GlobalObjs.globalObjs.workcharts.append(workchart7)
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,32 +156,42 @@ class MainWorkChartsCollectionViewController: UICollectionViewController, UIColl
     
         // Configure the cell
         cell.lb_name.text = GlobalObjs.globalObjs.workcharts[indexPath.row].name
-        switch GlobalObjs.globalObjs.workcharts[indexPath.row].type {
-        case WorkChartTypeEnum.Line:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_linechart")
-            break
-        case WorkChartTypeEnum.Bar:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_barchart")
-            break
-        case WorkChartTypeEnum.Bubble:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_bubble")
-            break
-        case WorkChartTypeEnum.Candle:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_candlestickchart")
-            break
-        case WorkChartTypeEnum.Pie:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_piechart")
-            break
-        case WorkChartTypeEnum.Radar:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_radarchart")
-            break
-        case WorkChartTypeEnum.Scatter:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_scatterchart")
-            break
-        default:
-            cell.img_preview.image = #imageLiteral(resourceName: "s_linechart")
-            break
+        if( GlobalObjs.globalObjs.workcharts[indexPath.row].chartItems.count == 0){
+            cell.img_preview.image = #imageLiteral(resourceName: "s_mainchart")
+        } else {
+            if(GlobalObjs.globalObjs.workcharts[indexPath.row].chartItems[0].mainsubType == .Main){
+                cell.img_preview.image = #imageLiteral(resourceName: "s_mainchart")
+            } else {
+                GlobalObjs.globalObjs.workcharts[indexPath.row].type = GlobalObjs.globalObjs.workcharts[indexPath.row].chartItems[0].type
+                switch GlobalObjs.globalObjs.workcharts[indexPath.row].type {
+                    case WorkChartTypeEnum.Line:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_linechart")
+                        break
+                    case WorkChartTypeEnum.Bar:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_barchart")
+                        break
+                    case WorkChartTypeEnum.Bubble:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_bubble")
+                        break
+                    case WorkChartTypeEnum.Candle:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_candlestickchart")
+                        break
+                    case WorkChartTypeEnum.Pie:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_piechart")
+                        break
+                    case WorkChartTypeEnum.Radar:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_radarchart")
+                        break
+                    case WorkChartTypeEnum.Scatter:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_scatterchart")
+                        break
+                    default:
+                        cell.img_preview.image = #imageLiteral(resourceName: "s_linechart")
+                        break
+                }
+            }
         }
+       
         return cell
     }
 

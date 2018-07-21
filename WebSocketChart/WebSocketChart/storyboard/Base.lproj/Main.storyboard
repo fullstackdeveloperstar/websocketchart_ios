@@ -423,13 +423,14 @@
                     <navigationItem key="navigationItem" title="Add Data" id="lek-1z-CcZ">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="uzV-Cy-jPg">
                             <connections>
-                                <segue destination="Y3g-Qm-Wc0" kind="show" id="xLe-dK-i12"/>
+                                <action selector="next:" destination="JFO-F5-OWp" id="NsQ-yh-7EZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pk_charttype" destination="Lor-KO-G0F" id="SA6-RE-tiM"/>
                         <outlet property="sg_typeofdata" destination="DDi-67-tC5" id="dwq-oE-AKz"/>
+                        <segue destination="Y3g-Qm-Wc0" kind="show" identifier="segue_adddata_details" id="YiK-ZV-do9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3E-tP-nFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
