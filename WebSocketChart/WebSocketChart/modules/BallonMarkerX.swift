@@ -2,7 +2,7 @@
 import Foundation
 import Charts
 
-open class BalloonMarker: MarkerImage
+open class BalloonMarkerX: MarkerImage
 {
     open var color: UIColor
     open var arrowSize = CGSize(width: 15, height: 11)
@@ -84,7 +84,7 @@ open class BalloonMarker: MarkerImage
         var rect = CGRect(
             origin: CGPoint(
                 x: point.x + offset.x,
-                y: point.y + offset.y),
+                y: 50 + offset.y),
             size: size)
         rect.origin.x -= size.width / 2.0
         rect.origin.y -= size.height
@@ -160,7 +160,7 @@ open class BalloonMarker: MarkerImage
             rect.origin.y += self.insets.top
         }
         
-      
+        
         rect.size.height -= self.insets.top + self.insets.bottom
         
         UIGraphicsPushContext(context)
@@ -179,7 +179,7 @@ open class BalloonMarker: MarkerImage
     
     open func setLabel(_ newLabel: String)
     {
-        label = "Comment"
+        label = newLabel
         
         _drawAttributes.removeAll()
         _drawAttributes[.font] = self.font

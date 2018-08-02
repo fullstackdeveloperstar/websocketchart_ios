@@ -60,7 +60,20 @@ class MainWorkChartsCollectionViewController: UICollectionViewController, UIColl
         chartItem2_1.minLineText = "Buy Position"
         chartItem2_1.maxLineLabelPosition = .rightTop
         chartItem2_1.minLineLabelPosition = .rightBottom
+        
+        let chartItem2_2 = ChartItem()
+        chartItem2_2.name = "Chart Item 1"
+        chartItem2_2.type = .Line
+        chartItem2_2.mainsubType = .Sub
+        chartItem2_2.isMaxLine = true
+        chartItem2_2.maxLineText = "sms, email, IVR"
+        chartItem2_2.isMinLine = true
+        chartItem2_2.minLineText = "sms, email, IVR"
+        chartItem2_2.maxLineLabelPosition = .leftTop
+        chartItem2_2.minLineLabelPosition = .leftBottom
+        
         workchart2.chartItems.append(chartItem2_1)
+        workchart2.chartItems.append(chartItem2_2)
         
         let workchart3 = Workchart()
         workchart3.name = "WorkChart3"

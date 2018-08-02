@@ -83,8 +83,9 @@ class WorkChartCommonCell: NSObject , ChartViewDelegate{
         llXAxis.labelPosition = .rightBottom
         llXAxis.valueFont = .systemFont(ofSize: 10)
         
-        self.linchart.xAxis.gridLineDashLengths = [10, 10]
-        self.linchart.xAxis.gridLineDashPhase = 0
+//        self.linchart.xAxis.gridLineDashLengths = [10, 10]
+//        self.linchart.xAxis.gridLineDashPhase = 0
+        self.linchart.xAxis.labelPosition = .bottom
         
         
         
@@ -120,13 +121,15 @@ class WorkChartCommonCell: NSObject , ChartViewDelegate{
         //[_chartView.viewPortHandler setMaximumScaleY: 2.f];
         //[_chartView.viewPortHandler setMaximumScaleX: 2.f];
         
-        let marker = BalloonMarker(color: UIColor(white: 180/255, alpha: 1),
+        let marker = BalloonMarkerXY(color: UIColor(white: 0/255, alpha: 1),
                                    font: .systemFont(ofSize: 12),
                                    textColor: .white,
-                                   insets: UIEdgeInsets(top: 8, left: 8, bottom: 20, right: 8))
+                                   insets: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
         marker.chartView = self.linchart
-        marker.minimumSize = CGSize(width: 80, height: 40)
+        marker.minimumSize = CGSize(width: 40, height: 10)
         self.linchart.marker = marker
+        
+        
         
         self.linchart.legend.form = .circle
         self.linchart.legend.horizontalAlignment = .center
@@ -143,6 +146,7 @@ class WorkChartCommonCell: NSObject , ChartViewDelegate{
         self.linchart.leftAnchor.constraint(equalTo: self.parentTVCC.leftAnchor).isActive = true
         self.linchart.rightAnchor.constraint(equalTo: self.parentTVCC.rightAnchor).isActive = true
         self.linchart.bottomAnchor.constraint(equalTo: self.parentTVCC.bottomAnchor).isActive = true
+    
     }
     
     
@@ -157,6 +161,7 @@ class WorkChartCommonCell: NSObject , ChartViewDelegate{
         
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
+        set1.highlightColor = .black
         set1.setColor(.black)
         set1.setCircleColor(.black)
         set1.lineWidth = 1
@@ -661,10 +666,6 @@ class WorkChartCommonCell: NSObject , ChartViewDelegate{
         self.combinedchart.leftAnchor.constraint(equalTo: self.parentTVCC.leftAnchor).isActive = true
         self.combinedchart.rightAnchor.constraint(equalTo: self.parentTVCC.rightAnchor).isActive = true
         self.combinedchart.bottomAnchor.constraint(equalTo: self.parentTVCC.bottomAnchor).isActive = true
-        
-        
-        
-        
     }
     
     func setCombineChartData() {
@@ -782,6 +783,16 @@ class WorkChartCommonCell: NSObject , ChartViewDelegate{
         set.drawValuesEnabled = true
         
         return BubbleChartData(dataSet: set)
+    }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(chartView.frame.width)
+        print(highlight)
+    }
+    
+    func  chartTranslated(_ chartView: ChartViewBase, dX: CGFloat, dY: CGFloat) {
+//        print("dx:\(dX), dY:\(dY)")
+//        self.linchart
     }
 }
     
